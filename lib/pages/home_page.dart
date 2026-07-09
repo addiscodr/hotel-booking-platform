@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 40, left: 20),
+                  padding: EdgeInsets.only(top: 40, left: 20, right: 20),
                   width: MediaQuery.of(context).size.width,
                   height: 280,
                   decoration: BoxDecoration(
@@ -57,6 +57,26 @@ class _HomePageState extends State<HomePage> {
                       Text(
                         "Hey, Esayas! Tell us where you want to go",
                         style: AppWidget.whiteTextStyle(24),
+                      ),
+                      const SizedBox(height: 20),
+                      Container(
+                        padding: EdgeInsets.only(top: 5, bottom: 5),
+                        width: MediaQuery.of(context).size.width,
+                        decoration: BoxDecoration(
+                          color: const Color.fromARGB(32, 255, 255, 255),
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            prefixIcon: Icon(
+                              Icons.search,
+                              color: Colors.white54,
+                            ),
+                            hintText: "Search for a place...",
+                            hintStyle: AppWidget.whiteTextStyle(18),
+                          ),
+                        ),
                       ),
                     ],
                   ),
