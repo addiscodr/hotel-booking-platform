@@ -12,8 +12,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(206, 255, 255, 255),
       body: Container(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Stack(
               children: [
@@ -82,6 +84,74 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ],
+            ),
+            SizedBox(height: 20),
+
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Text(
+                "The most relevant",
+                style: AppWidget.headlineTextStyle(22),
+              ),
+            ),
+            const SizedBox(height: 20),
+            Container(
+              height: 350,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    margin: EdgeInsets.only(left: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(30),
+                          child: Image.asset(
+                            "assets/images/hotel1.jpg",
+                            width: MediaQuery.of(context).size.width / 1.2,
+                          ),
+                        ),
+                        const SizedBox(height: 10),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20),
+                          child: Row(
+                            children: [
+                              Text(
+                                "Swimming pool",
+                                style: AppWidget.headlineTextStyle(21),
+                              ),
+                              SizedBox(
+                                width: MediaQuery.of(context).size.width / 3.5,
+                              ),
+                              Text(
+                                "\$20",
+                                style: AppWidget.headlineTextStyle(21),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20),
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.location_on,
+                                color: Colors.blue,
+                                size: 30,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
