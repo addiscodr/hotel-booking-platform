@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotel_booking_platform/pages/detail_page.dart';
 import 'package:hotel_booking_platform/pages/home_page.dart';
 
 void main() {
@@ -16,11 +17,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const HomePage(),
+      home: const DetailPage(),
     );
   }
 }
 
 
 
-// continue from 40:00
+// continue from 1:13:00
