@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:hotel_booking_platform/pages/login_page.dart';
+import 'package:hotel_booking_platform/pages/signup_page.dart';
 import 'package:hotel_booking_platform/services/widget_support.dart';
 
-class SignupPage extends StatefulWidget {
-  const SignupPage({super.key});
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
 
   @override
-  State<SignupPage> createState() => _SignupPageState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _SignupPageState extends State<SignupPage> {
+class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,33 +20,16 @@ class _SignupPageState extends State<SignupPage> {
           children: [
             Center(
               child: Image.asset(
-                "assets/images/signup.png",
+                "assets/images/login.png",
                 height: 300,
                 width: 300,
                 fit: BoxFit.cover,
               ),
             ),
             const SizedBox(height: 30),
-            Text("Signup", style: AppWidget.headlineTextStyle(25)),
+            Text("Login", style: AppWidget.headlineTextStyle(25)),
             const SizedBox(height: 20),
-            Container(
-              margin: EdgeInsets.only(left: 30, right: 30),
-              decoration: BoxDecoration(
-                color: Color(0xFFECECF8),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: TextField(
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                  prefixIcon: Icon(
-                    Icons.person,
-                    color: const Color.fromARGB(255, 2, 104, 186),
-                  ),
-                  hintText: "Enter Username",
-                ),
-              ),
-            ),
-            const SizedBox(height: 15),
+
             Container(
               margin: EdgeInsets.only(left: 30, right: 30),
               decoration: BoxDecoration(
@@ -82,6 +65,19 @@ class _SignupPageState extends State<SignupPage> {
                 ),
               ),
             ),
+            const SizedBox(height: 10),
+            Container(
+              padding: EdgeInsets.only(right: 30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    "Forgot Password? ",
+                    style: AppWidget.normalTextStyle(16),
+                  ),
+                ],
+              ),
+            ),
             const SizedBox(height: 30),
             Container(
               margin: EdgeInsets.only(left: 30, right: 30),
@@ -93,7 +89,7 @@ class _SignupPageState extends State<SignupPage> {
               ),
               child: Center(
                 child: Text(
-                  "Sign Up",
+                  "Log In",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 26,
@@ -107,18 +103,18 @@ class _SignupPageState extends State<SignupPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Already have an account? ",
+                  "Don't have an account? ",
                   style: AppWidget.normalTextStyle(16),
                 ),
                 GestureDetector(
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => LoginPage()),
+                      MaterialPageRoute(builder: (context) => SignupPage()),
                     );
                   },
                   child: Text(
-                    "Sign In",
+                    "Sign Up",
                     style: TextStyle(
                       color: const Color.fromARGB(255, 2, 104, 186),
                       fontSize: 16,
