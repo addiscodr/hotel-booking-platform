@@ -15,6 +15,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: const Color.fromARGB(206, 255, 255, 255),
       body: SingleChildScrollView(
         child: Container(
+          padding: EdgeInsets.all(0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -96,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               const SizedBox(height: 20),
-              Container(
+              SizedBox(
                 height: 360,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
